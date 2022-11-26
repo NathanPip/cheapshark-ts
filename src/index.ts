@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { URL } from "./helpers/constants";
 import { toSearchParams } from "./helpers/queries";
-import { GameDealsParams, GameListParams } from "./types/params";
+import { GameDealsParams, GameListParams, RequireAtLeastOne } from "./types/params";
 import {
   GameDealResponse,
   GameDealsResponse,
@@ -41,7 +41,7 @@ class CheapShark {
   };
 
   public getGames = async (
-    params?: GameListParams
+    params: RequireAtLeastOne<GameListParams>
   ): Promise<GameListResponse> => {
     return new Promise(async (reject, resolve) => {
       try {
@@ -73,11 +73,15 @@ class CheapShark {
     return new Promise(async (reject, resolve) => {
       try {
         let string = "";
-        for (let i of ids) {
-          string += `${i},`;
+        for (let i=0; i<ids.length; i++) {
+          if(i < ids.length-1){
+            string += `${ids[i]},`;
+          } else {
+            string += `${ids[i]}`;
+          }
         }
         const response = (await (
-          await fetch(`${URL}/games?id=${string}`)
+          await fetch(`${URL}/games?ids=${string}`)
         ).json()) as MultipleGameLookupResponse;
         resolve(response);
       } catch (err: any) {
@@ -98,5 +102,14 @@ class CheapShark {
     });
   };
 }
-
 export default CheapShark;
+// export {
+//   GameDealsParams,
+//   GameListParams,
+//   GameDealResponse,
+//   GameDealsResponse,
+//   GameListResponse,
+//   GameLookupResponse,
+//   MultipleGameLookupResponse,
+//   StoresResponse,
+// };

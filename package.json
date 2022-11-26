@@ -1,21 +1,31 @@
 {
   "name": "cheapshark-ts",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "an abstract layer for the cheapshark api which provides easy, typesafe, endpoint calling through functions",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Nathan Piper",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NathanPip/cheapshark-ts"
+  },
+  "keywords": [
+    "cheapshark-ts",
+    "cheapshark ts",
+    "cheapshark node",
+    "cheapshark wrapper",
+    "cheapshark api",
+    "cheapshark",
+    "cheapshark typescript",
+    "game deals",
+    "game deals api",
+    "game deals typescript"
+  ],
   "scripts": {
     "dev": "ts-node-dev --respawn --transpileOnly src/index.ts",
     "build": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "cheapshark-ts"
-  },
-  "keywords": [
-    "cheapshark-ts"
-  ],
-  "author": "Nathan Piper",
-  "license": "ISC",
   "dependencies": {
     "node-fetch": "^3.3.0"
   },
