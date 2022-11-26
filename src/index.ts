@@ -22,7 +22,7 @@ class CheapShark {
           await fetch(`${URL}/deals?${searchParams}`)
         ).json()) as GameDealsResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
@@ -34,7 +34,7 @@ class CheapShark {
           await fetch(`${URL}/deals?id=${id}`)
         ).json()) as GameDealResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
@@ -50,7 +50,7 @@ class CheapShark {
           await fetch(`${URL}/games?${searchParams}`)
         ).json()) as GameListResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
@@ -62,7 +62,7 @@ class CheapShark {
           await fetch(`${URL}/games?id=${id}`)
         ).json()) as GameLookupResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
@@ -80,7 +80,7 @@ class CheapShark {
           await fetch(`${URL}/games?id=${string}`)
         ).json()) as MultipleGameLookupResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
@@ -92,7 +92,7 @@ class CheapShark {
           await fetch(`${URL}/stores`)
         ).json()) as StoresResponse;
         resolve(response);
-      } catch (err) {
+      } catch (err: any) {
         reject(err);
       }
     });
