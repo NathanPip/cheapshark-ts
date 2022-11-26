@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import { URL } from "./helpers/constants";
 import { toSearchParams } from "./helpers/queries";
 import { GameDealsParams, GameListParams, RequireAtLeastOne } from "./types/params";
@@ -11,7 +10,7 @@ import {
   StoresResponse,
 } from "./types/responses";
 
-class CheapShark {
+export class CheapShark {
   public getDeals = async (
     params?: GameDealsParams
   ): Promise<GameDealsResponse> => {
@@ -102,14 +101,3 @@ class CheapShark {
     });
   };
 }
-export default CheapShark;
-// export {
-//   GameDealsParams,
-//   GameListParams,
-//   GameDealResponse,
-//   GameDealsResponse,
-//   GameListResponse,
-//   GameLookupResponse,
-//   MultipleGameLookupResponse,
-//   StoresResponse,
-// };
