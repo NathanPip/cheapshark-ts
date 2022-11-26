@@ -15,13 +15,13 @@ export type GameDealsParams = {
     steamworks?: boolean;
     onSale?: boolean;
     output?: string;
-}
-
+};
 export type GameListParams = {
     title?: string;
     steamAppID?: number;
     limit?: number;
     exact?: boolean;
-}
-
-export type RequireAtLeastOne<T> = { [K in keyof T]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<keyof T, K>>>; }[keyof T]
+};
+export type RequireAtLeastOne<T> = {
+    [K in keyof T]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<keyof T, K>>>;
+}[keyof T];
