@@ -27,7 +27,7 @@ The CheapShark class consists of getter functions which correspond to each diffe
 ----------
 
 ## Default Query Parameters
-You can set default parameters for game deals and games list calls. This is useful if you want to set a default lowestPrice for deals or a filter that persists between calls. You can set default parameters by calling the setter functions.
+You can set default parameters for game deals and games list calls. This is useful if you want to set a default lowestPrice for deals or a filter that persists between calls. You can set default parameters by calling the setter functions. The default parameters are reset to their default values when the CheapShark class is reinstantiated.
 
 ### setNewDealsParams
 set new default params for getDeals calls
