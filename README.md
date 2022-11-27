@@ -25,8 +25,6 @@ const cheapsharkAPI = new CheapShark();
 The CheapShark class consists of getter functions which correspond to each different CheapShark API endpoint. Each function returns a typsafe Promise with the data requested.
 
 ----------
-----------
-----------
 
 ## getDeals
 Returns a list of game deals depending on search criteria
