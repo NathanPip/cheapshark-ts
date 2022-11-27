@@ -1,7 +1,7 @@
 {
   "name": "cheapshark-ts",
-  "version": "0.9.0",
-  "description": "an abstract layer for the cheapshark api which provides easy, typesafe, endpoint calling through functions",
+  "version": "1.0.0",
+  "description": "an abstract layer for the cheapshark api which provides easy, typesafe, endpoint calling",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Nathan Piper",
