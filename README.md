@@ -19,12 +19,29 @@ Install cheapshark-ts with npm
 ```javascript
 import {CheapShark} from 'cheapshark-ts'
 
-const cheapsharkAPI = new CheapShark();
+const cheapshark = new CheapShark();
 ```
 ## Usage/Examples
 The CheapShark class consists of getter functions which correspond to each different CheapShark API endpoint. Each function returns a typsafe Promise with the data requested.
 
 ----------
+
+## Default Query Parameters
+You can set default parameters for game deals and games list calls. This is useful if you want to set a default lowestPrice for deals or a filter that persists between calls. You can set default parameters by calling the setter functions.
+
+### setNewDealsParams
+set new default params for getDeals calls
+
+```javascript
+cheapshark.setNewDealsParams({lowerPrice: 0.99, metacritic: 80});
+```
+
+### setNewGamesParams
+set new default params for getGames calls
+
+```javascript
+cheapshark.setNewGamesParams({title: 'Divinity Original Sin 2', exact: true});
+```
 
 ## getDeals
 Returns a list of game deals depending on search criteria
