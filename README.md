@@ -213,6 +213,80 @@ try {
 }
 ```
 
+## setAlert
+Returns an array of stores where deals are retrieved
+
+```javascript
+/**
+ * @param {
+ * email: string;
+ * gameID: number;
+ * price: number;
+ * }
+ */
+/** returns true if resolved, false if rejected */
+
+cheapshark
+  .setAlert({email: randomExample@example123.com, gameID: 612, price: 9.99})
+  .then((didPass) => console.log(didPass));
+
+// or async await example
+try {
+  const didPass = await cheapshark.setAlert({email: randomExample@example123.com, gameID: 612, price: 9.99})
+  console.log(didPass);
+} catch (error) {
+  console.error(error);
+}
+```
+
+## deleteAlert
+Returns an array of stores where deals are retrieved
+
+```javascript
+/**
+ * @param {
+ * email: string;
+ * gameID: number;
+ * price: number;
+ * }
+ */
+/** returns true if resolved, false if rejected */
+
+cheapshark
+  .deleteAlert({email: "randomExample@example123.com", gameID: 412, price: 15.00})
+  .then((didPass) => console.log(didPass));
+
+// or async await example
+try {
+  const didPass = await cheapshark.deleteAlert({email: "randomExample@example123.com", gameID: 412, price: 15.00})
+  console.log(didPass);
+} catch (error) {
+  console.error(error);
+}
+```
+
+## sendManageAlertsEmail
+Returns an array of stores where deals are retrieved
+
+```javascript
+/**
+ * @param email: string
+ */
+/** returns true if resolved, false if rejected */
+
+cheapshark
+  .sendManageAlertsEmail("randomExample@example123.com")
+  .then((didPass) => console.log(didPass));
+
+// or async await example
+try {
+  const didPass = await cheapshark.sendManageAlertsEmail("randomExample@example123.com")
+  console.log(didPass);
+} catch (error) {
+  console.error(error);
+}
+```
+
 ## Official API Docs
 
 Official Docs: https://apidocs.cheapshark.com/
