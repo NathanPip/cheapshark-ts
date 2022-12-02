@@ -1,6 +1,6 @@
 
 # cheapshark-ts
-an abstract layer for the cheapshark api which provides easy, typesafe, endpoint calling through functions
+an abstract layer for the cheapshark api which provides easy, typesafe, endpoint calling
 
 **Note if used with Node**: Currently only compatible with Node Versions 17.5+
 
